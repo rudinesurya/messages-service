@@ -10,9 +10,9 @@ export class MessagesService {
     @InjectModel('Message') private readonly messageModel: Model<IMessage>
   ) { }
 
-  public async getMessages(): Promise<IMessage[]> {
+  public async getMessagesByChatId(id: string): Promise<IMessage[]> {
     return this.messageModel
-      .find()
+      .find({ chat_id: id })
       .exec();
   }
 

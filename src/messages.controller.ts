@@ -14,10 +14,10 @@ export class MessagesController {
     private readonly messagesService: MessagesService,
   ) { }
 
-  @MessagePattern('messages_get')
-  public async getMessages(): Promise<IMessagesSearchResponse> {
+  @MessagePattern('messages_get_by_chat_id')
+  public async getMessagesByChatId({ id }): Promise<IMessagesSearchResponse> {
     let result: IMessagesSearchResponse;
-    const messages = await this.messagesService.getMessages();
+    const messages = await this.messagesService.getMessagesByChatId(id);
     result = {
       status: HttpStatus.OK,
       system_message: 'messages_get_success',
