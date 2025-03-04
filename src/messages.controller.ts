@@ -7,7 +7,7 @@ import { IMessageUpdateResponse } from './interfaces/message-update-response.int
 import { IMessageUpdate } from './interfaces/message-update.interface';
 import { IMessage } from './interfaces/message.interface';
 import { IMessagesSearchResponse } from './interfaces/messages-search-response.interface';
-import logger from './services/logger';
+import logger from '@rudinesurya/logger';
 
 @Controller('messages')
 export class MessagesController {
