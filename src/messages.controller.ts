@@ -1,13 +1,8 @@
 import { Controller, HttpStatus } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
 import { MessagesService } from './services/messages.service';
-import { IMessageCreateResponse } from './interfaces/message-create-response.interface';
-import { IMessageDeleteResponse } from './interfaces/message-delete-response.interface';
-import { IMessageUpdateResponse } from './interfaces/message-update-response.interface';
-import { IMessageUpdate } from './interfaces/message-update.interface';
-import { IMessage } from './interfaces/message.interface';
-import { IMessagesSearchResponse } from './interfaces/messages-search-response.interface';
 import logger from '@rudinesurya/logger';
+import { IMessagesSearchResponse, IMessage, IMessageCreateResponse, IMessageUpdate, IMessageUpdateResponse, IMessageDeleteResponse } from '@rudinesurya/messages-service-interfaces';
 
 @Controller('messages')
 export class MessagesController {
